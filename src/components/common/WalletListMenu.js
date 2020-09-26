@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import { StyleSheet } from 'react-native'
-import slowlog from 'react-native-slowlog'
 import { sprintf } from 'sprintf-js'
 
 import { type WalletListMenuKey } from '../../actions/WalletListMenuActions.js'
@@ -69,7 +68,6 @@ export class WalletListMenu extends React.Component<Props> {
       }
       this.options.push(temp)
     }
-    slowlog(this, /.*/, global.slowlogOptions)
   }
 
   optionAction = (optionKey: WalletListMenuKey) => {
